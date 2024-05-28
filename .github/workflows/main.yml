@@ -7,7 +7,6 @@ on:
 jobs:
   checkout-and-print-tree:
     runs-on: ubuntu-latest
-    
     services:
       postgres:
         image: postgres:13.10
@@ -15,14 +14,14 @@ jobs:
           POSTGRES_USER: django_user
           POSTGRES_PASSWORD: django_password
           POSTGRES_DB: django_db
-        ports: 
+        ports:
           - 5432: 5432
         options: --health-cmd pg_isready --health-interval 10s --health-timeout 5s --health-retries 5
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
         uses: actions/setup-python@v4
-        with: 
+        with:
           python-version: 3.9
       - name: Install dependecies
         run: |
