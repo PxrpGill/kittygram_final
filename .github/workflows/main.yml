@@ -104,4 +104,4 @@ jobs:
         with: 
           context: ./gateway/
           push: true
-          tags: pxrpgill/kittygram_gateway:latest
+          tags: PxrpGill/kittygram_gateway:latest
